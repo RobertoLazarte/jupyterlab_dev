@@ -36,7 +36,8 @@ ENV TZ="America/Sao_Paulo"\
 RUN pip install --no-cache-dir --disable-pip-version-check jupyterlab \
     && pip install --no-cache-dir --disable-pip-version-check -r requirements.txt \
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \	
-	&& echo $TZ > /etc/timezone	
+	&& echo $TZ > /etc/timezone	\
+	&& rm requirements.txt
 	
 EXPOSE 8888
 CMD ["jupyter","lab","--ip=0.0.0.0", "--allow-root", "--no-browser"] #deploy jupyterlab	
