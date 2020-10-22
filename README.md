@@ -18,7 +18,7 @@ E para criar container, rodá-lo em seu terminal (excluido automaticamente ao sa
 docker run -it --rm -p 8888:8888 <nome-da-imagem>:<tag>
 ```
 
-Com o container criado, acessar jupyterlab via: http://localhost:7054/, token para acesso definido dentro do Dockefile no parâmetro **JUPYTER_TOKEN**
+Com o container criado, acessar jupyterlab via: http://localhost:8888/, token para acesso definido dentro do Dockefile no parâmetro **JUPYTER_TOKEN**
 
 Para interagir com o container, ele já deve estar ativo, e rodar o comando:
 
